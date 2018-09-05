@@ -1,0 +1,17 @@
+User Tagging version 0.1
+
+This is free software licensed under the GNU General Public License. Please
+see http://www.gnu.org/copyleft/gpl.html for further details, including the
+full text and terms of the license.
+
+== About ==
+
+User Tagging is a MediaWiki extension that allows for @-style tagging of
+usernames, using autocompletion. If you enter an '@' in any textarea,
+entering any additional characters will begin autocompletion, and the
+autocompletion will continue until a username is selected, or there are
+no more possible matches, 
+
+== Authors ==
+
+This extension was created by Yaron Koren.

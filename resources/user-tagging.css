@@ -1,0 +1,6 @@
+/**
+ * CSS for the At Users extension.
+ */
+.ui-autocomplete-loading {
+	background: white url('loading.gif') center no-repeat;
+}

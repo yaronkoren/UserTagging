@@ -1,0 +1,49 @@
+{
+	"name": "User Tagging",
+	"version": "0.1",
+	"author": [
+		"Yaron Koren"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:User_Tagging",
+	"descriptionmsg": "usertagging-desc",
+	"license-name": "GPL-3.0",
+	"type": "hook",
+	"requires": {
+		"MediaWiki": ">= 1.27.0"
+	},
+	"APIModules": {
+		"usertaggingautocomplete": "UserTaggingAPI"
+	},
+	"MessagesDirs": {
+		"UserTagging": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"UserTaggingHooks": "UserTagging.hooks.php",
+		"UserTaggingAPI": "includes/UserTaggingAPI.php"
+	},
+	"ResourceModules": {
+		"ext.usertagging": {
+			"scripts": [
+				"resources/user-tagging.js",
+				"resources/textarea-helper.js"
+			],
+			"styles": [
+				"resources/user-tagging.css"
+			],
+			"dependencies": [
+				"jquery.ui.autocomplete"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "UserTagging"
+	},
+	"Hooks": {
+		"MakeGlobalVariablesScript": "UserTaggingHooks::setGlobalJSVariables",
+		"BeforePageDisplay": "UserTaggingHooks::addModules"
+	},
+	"manifest_version": 1
+}
